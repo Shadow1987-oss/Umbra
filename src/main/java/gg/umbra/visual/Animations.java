@@ -67,6 +67,11 @@ extends HackModule {
         return null;
     }
 
+    @Override
+    public String getId() {
+        return "blockhit";
+    }
+
     public Animations() {
         super("BlockHit", (int)MODULE_COLOR, Category.COMBAT, "Automatically blockhit");
         this.predictiveMode = new DamageResponsiveAnimationsMode(this, "Predict").getSelectionValue();

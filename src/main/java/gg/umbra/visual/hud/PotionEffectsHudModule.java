@@ -10,6 +10,11 @@ extends HudModule {
     public final ToggleSetting showPositiveEffects = ToggleSetting.create(this, "Show Positive Effects", true);
     public final ToggleSetting showNegativeEffects = ToggleSetting.create(this, "Show Negative Effects", true);
 
+    @Override
+    public String getId() {
+        return "potionstatus";
+    }
+
     public PotionEffectsHudModule() {
         super("Potion Status", HudModuleGroup.HUD, "potion_status", PotionEffectsHudFrame.class);
         this.setSuffix("Shows your currently active potion effects");

@@ -114,6 +114,11 @@ extends HackModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "directionlines";
+    }
+
     public DirectionLines() {
         super("DirectionLines", (int)MODULE_COLOR, Category.RENDER);
         this.renderPlayers = ToggleSetting.create(this, "Render Players", true);

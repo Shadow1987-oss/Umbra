@@ -128,6 +128,11 @@ extends HackModule {
         return null;
     }
 
+    @Override
+    public String getId() {
+        return "search";
+    }
+
     public BlockFinder() {
         super("Search", (int)MODULE_HASH, Category.RENDER, "Draws outline around selected blocks\nAdd blocks in Search frame");
         this.range = SliderSetting.create((Object)this, "Range", "#", "", 1.0, 50.0, 100.0, 1.0);

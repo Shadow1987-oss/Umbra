@@ -26,6 +26,11 @@ extends HackModule {
     private final SliderSetting delayValue = SliderSetting.create((Object)this, "Delay", "#", "", 0.0, 1.0, 4.0, 1.0);
     private final ModeOption blocksOption;
 
+    @Override
+    public String getId() {
+        return "fastplace";
+    }
+
     public FastPlace() {
         super("FastPlace", (int)MODULE_COLOR, Category.WORLD, "Changes the block place delay.");
         this.allOption = new ModeOption("All");

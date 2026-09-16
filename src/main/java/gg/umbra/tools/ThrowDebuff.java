@@ -94,6 +94,11 @@ extends UtilityHack {
         return !this.itemsToThrow.isEmpty();
     }
 
+    @Override
+    public String getId() {
+        return "throwdebuff";
+    }
+
     public ThrowDebuff() {
         super("ThrowDebuff", Category.INVENTORY, "");
         this.oneOfEachOption = new ModeOption("One of each");

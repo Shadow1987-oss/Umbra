@@ -10,6 +10,11 @@ import gg.umbra.wrapper.impl.Minecraft;
 
 public class NoClickDelayHudModule
 extends HudModule {
+    @Override
+    public String getId() {
+        return "noclickdelay";
+    }
+
     public NoClickDelayHudModule() {
         super("NoClickDelay", HudModuleGroup.GAME, "no_click_delay2");
         this.setSuffix("Removes the click delay that normally occurs after missing an attack");

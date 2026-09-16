@@ -485,6 +485,11 @@ extends HackModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "hitflick";
+    }
+
     public HitBypass() {
         super("HitFlick", -3580417, Category.COMBAT, "Flicks off and on target to displace knockback angle");
         this.angle = SliderSetting.create(this, "Angle", "#", "deg", 0.0, 90.0, 360.0, 1.0, "0 = none, 90 = right, 180 = pull toward, 270 = left");

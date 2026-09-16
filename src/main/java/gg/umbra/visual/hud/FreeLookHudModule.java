@@ -228,6 +228,11 @@ extends HudModule {
         this.applyRenderRotation();
     }
 
+    @Override
+    public String getId() {
+        return "freelook";
+    }
+
     public FreeLookHudModule() {
         super("Freelook", HudModuleGroup.GAME, "freelook2");
         this.customSensitivity = ToggleSetting.create(this, "Use Custom Sensitivity", false, "Enable to set a separate sensitivity from Minecraft using a slider");

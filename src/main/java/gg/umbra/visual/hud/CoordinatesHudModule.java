@@ -12,6 +12,11 @@ extends HudModule {
     public final ModeOption horizontalMode = new ModeOption("Horizontal");
     public final OptionSetting displayMode = OptionSetting.create((Object)this, "Display Type", this.horizontalMode, this.horizontalMode, this.verticalMode);
 
+    @Override
+    public String getId() {
+        return "coords";
+    }
+
     public CoordinatesHudModule() {
         super("Coords", HudModuleGroup.HUD, "coords", CoordinatesHudFrame.class);
         this.setSuffix("Shows your current XYZ coordinates");

@@ -294,6 +294,14 @@ implements EventListener {
         return enabledStates;
     }
 
+    private static boolean hasModuleState(JsonObject states, HackModule mod) {
+        return states.has(mod.getId()) || states.has(mod.getName());
+    }
+
+    private static boolean getModuleState(JsonObject states, HackModule mod) {
+        return states.get(states.has(mod.getId()) ? mod.getId() : mod.getName()).getAsBoolean();
+    }
+
     public void applyProfileModuleStates(Profile profile) {
         this.suppressStateNotifications = true;
         JsonObject enabledStates = profile.getEnabledModuleStates();
@@ -301,11 +309,11 @@ implements EventListener {
         for (HackModule mod : this.collectMods()) {
             if (mod instanceof HudModule || mod.getCategory().equals(Category.NONE)) continue;
             try {
-                if (enabledStates.has(mod.getId())) {
+                if (hasModuleState(enabledStates, mod)) {
                     if (!mod.isVisible()) continue;
                     try {
                         if (mod.isEnabled()) continue;
-                        mod.setEnabled(enabledStates.get(mod.getId()).getAsBoolean());
+                        mod.setEnabled(getModuleState(enabledStates, mod));
                         ++enabledCount;
                     }
                     catch (Exception exception) {
@@ -523,8 +531,8 @@ implements EventListener {
 
     public void applyHudModuleStates(JsonObject enabledStates) {
         for (HackModule mod : this.collectMods()) {
-            if (!(mod instanceof HudModule) || !enabledStates.has(mod.getId())) continue;
-            boolean enabled = enabledStates.get(mod.getId()).getAsBoolean();
+            if (!(mod instanceof HudModule) || !hasModuleState(enabledStates, mod)) continue;
+            boolean enabled = getModuleState(enabledStates, mod);
             if (mod.isEnabled() == enabled) continue;
             mod.setEnabled(enabled);
         }
@@ -577,7 +585,7 @@ implements EventListener {
     public List<HackModule> getProfileModules(JsonObject enabledModuleStates) {
         ArrayList<HackModule> modules = new ArrayList<HackModule>();
         for (HackModule mod : this.collectMods()) {
-            if (!enabledModuleStates.has(mod.getId()) || !mod.isVisible() || mod.getCategory() == Category.NONE) continue;
+            if (!hasModuleState(enabledModuleStates, mod) || !mod.isVisible() || mod.getCategory() == Category.NONE) continue;
             modules.add(mod);
         }
         return modules;

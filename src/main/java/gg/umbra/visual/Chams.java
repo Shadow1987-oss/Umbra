@@ -196,6 +196,11 @@ extends HackModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "chams";
+    }
+
     public Chams() {
         super("Chams", -16711936, Category.RENDER, "Render players through walls.");
         this.colored = ToggleSetting.create(this, "Colored", false, "Colors entities.");

@@ -416,6 +416,11 @@ extends HackModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "bedplates";
+    }
+
     public BedPlates() {
         super("BedPlates", new Color(245, 0, 37).getRGB(), Category.RENDER, "Shows block types around beds");
         this.v(10L, true);

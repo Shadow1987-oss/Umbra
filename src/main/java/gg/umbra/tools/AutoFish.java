@@ -297,6 +297,11 @@ extends HackModule {
         this.pressedKeys.add(keyBinding);
     }
 
+    @Override
+    public String getId() {
+        return "autofish";
+    }
+
     public AutoFish() {
         super("AutoFish", 12452021, Category.WORLD, "Automatically fishes for you.");
         this.clickQueue = new ConcurrentLinkedQueue<InventoryClick>();

@@ -40,6 +40,11 @@ extends HudModule {
         this.applyWorldTime(event.getWorld(), Math.round(hours * 1000.0));
     }
 
+    @Override
+    public String getId() {
+        return "timechanger";
+    }
+
     public TimeChangerHudModule() {
         super("Time Changer", HudModuleGroup.GAME, "time_changer");
         this.setSuffix("Sets the in-game world time");

@@ -64,6 +64,11 @@ extends HackModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "explosions";
+    }
+
     public Explosions() {
         super("Explosions", 11534100, Category.RENDER, "Shows the explosion radius of TNT");
         this.addValue(this.showBlastRing);

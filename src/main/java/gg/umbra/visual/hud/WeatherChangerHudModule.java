@@ -47,6 +47,11 @@ extends HudModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "weather";
+    }
+
     public WeatherChangerHudModule() {
         super("Weather", HudModuleGroup.GAME, "weather");
         this.rainingOption = new ModeOption("Raining");

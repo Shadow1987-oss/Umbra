@@ -416,6 +416,11 @@ extends HackModule {
         GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
+    @Override
+    public String getId() {
+        return "nametags";
+    }
+
     public EntityLabels() {
         super("NameTags", -16711936, Category.RENDER, "Renders nametags on entities through walls.");
         this.ignoreInvisibles = ToggleSetting.create(this, "Ignore Invisibles", false, "Determines if we draw a nametag\nfor invisible entities");

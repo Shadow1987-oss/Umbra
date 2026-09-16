@@ -42,6 +42,11 @@ extends UtilityHack {
     private boolean collecting;
 
 
+    @Override
+    public String getId() {
+        return "armorswitch";
+    }
+
     public ArmorSwitch() {
         super("ArmorSwitch", Category.INVENTORY, "Switches between armor sets");
         this.delayValue = SliderSetting.create(this, "Delay", "#", "", 0.0, 100.0, 200.0);

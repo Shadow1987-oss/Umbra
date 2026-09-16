@@ -1,5 +1,5 @@
 /*
- * Recovered from the sample class that collided with Javassist's
+ * Renamed from the sample class that collided with Javassist's
  * javassist.bytecode.analysis.Frame.
  */
 package gg.umbra.ui.font.stb;

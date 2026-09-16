@@ -9,6 +9,11 @@ import gg.umbra.render.ShaderGroupRenderStateManager;
 
 public class InventoryBlurHudModule
 extends HudModule {
+    @Override
+    public String getId() {
+        return "inventoryblur";
+    }
+
     public InventoryBlurHudModule() {
         super("Inventory Blur", HudModuleGroup.GAME, "inventory_blur");
         this.setSuffix("Blurs the background while in an inventory");

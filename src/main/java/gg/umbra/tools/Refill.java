@@ -127,6 +127,11 @@ extends UtilityHack
         this.clickQueue.add(new InventoryClick(windowId, slot, mouseButton, clickType));
     }
 
+    @Override
+    public String getId() {
+        return "refill";
+    }
+
     public Refill() {
         super("Refill", Category.INVENTORY, "Refills your hotbar with healing items.");
         this.soupMode = new ModeOption("Soup");

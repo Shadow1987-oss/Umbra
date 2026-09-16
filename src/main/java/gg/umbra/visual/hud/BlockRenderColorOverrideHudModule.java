@@ -18,6 +18,11 @@ extends HudModule {
         EventBlockRenderColorOverride.setColor((float)((Color)mutableColor).getRed() / 255.0f, (float)((Color)mutableColor).getGreen() / 255.0f, (float)((Color)mutableColor).getBlue() / 255.0f, (float)((Color)mutableColor).getAlpha() / 255.0f);
     }
 
+    @Override
+    public String getId() {
+        return "hitcolor";
+    }
+
     public BlockRenderColorOverrideHudModule() {
         super("Hit Color", HudModuleGroup.GAME, "hit_color_mod");
         this.setSuffix("Changes the color of damaged entities");

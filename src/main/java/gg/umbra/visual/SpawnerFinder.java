@@ -30,6 +30,11 @@ extends HackModule {
     private static final long moduleId = -5031384321297466627L;
 
 
+    @Override
+    public String getId() {
+        return "spawnerfinder";
+    }
+
     public SpawnerFinder() {
         super("SpawnerFinder", (int)moduleId, Category.RENDER);
         this.showDistance = ToggleSetting.create(this, "Show distance", true);

@@ -119,6 +119,11 @@ extends HackModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "fullbright";
+    }
+
     public BrightMode() {
         super("Fullbright", -256, Category.RENDER);
         this.gammaMode = new ModeOption("Gamma");

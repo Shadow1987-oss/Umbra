@@ -163,6 +163,11 @@ implements InventoryActionModule {
         return false;
     }
 
+    @Override
+    public String getId() {
+        return "cheststeal";
+    }
+
     public LootStealer() {
         super("ChestSteal", -208, Category.WORLD, "Take items upon opening a chest");
         this.keepOpen = ToggleSetting.create(this, "Keep open", false, "Keep chest open after clearing");

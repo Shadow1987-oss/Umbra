@@ -26,6 +26,11 @@ extends HudModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "clearwater";
+    }
+
     public NoFogHudModule() {
         super("Clear Water", HudModuleGroup.GAME, "clearwater");
         this.setSuffix("Makes water clear when under water");

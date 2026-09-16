@@ -22,6 +22,11 @@ extends HackModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "hitselect";
+    }
+
     public HitSelect() {
         super("HitSelect", 82881230, Category.COMBAT, "");
         this.chance = SliderSetting.create(this, "Chance", "#", "%", 0.0, 90.0, 100.0);

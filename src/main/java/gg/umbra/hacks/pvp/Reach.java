@@ -336,6 +336,11 @@ extends HackModule {
         this.applyMisplace(false);
     }
 
+    @Override
+    public String getId() {
+        return "reach";
+    }
+
     public Reach() {
         super("Reach", -16711936, Category.COMBAT, "Extends attack reach");
         this.chance = SliderSetting.createWithDescription(this, "Chance", "#", "%", 0.0, 50.0, 100.0, "The chance of reach taking affect when hitting an opponent");

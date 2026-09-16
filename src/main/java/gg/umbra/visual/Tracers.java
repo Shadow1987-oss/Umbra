@@ -116,6 +116,11 @@ extends HackModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "tracers";
+    }
+
     public Tracers() {
         super("Tracers", (int)MODULE_COLOR, Category.RENDER);
         this.renderPlayers = ToggleSetting.create(this, "Render Players", true);

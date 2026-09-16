@@ -216,6 +216,11 @@ implements InventoryActionModule {
         return -1;
     }
 
+    @Override
+    public String getId() {
+        return "autoarmor";
+    }
+
     public AutoArmor() {
         super("AutoArmor", (int)MAGIC_ID, Category.INVENTORY, "Automatically equips armor when needed.");
         this.inventoryOnly = ToggleSetting.create(this, "Inventory only", true, "Only equip armor when in inventory");

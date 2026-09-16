@@ -68,6 +68,11 @@ extends HudModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "reachdisplay";
+    }
+
     public ReachDisplayHudModule() {
         super("Reach Display", HudModuleGroup.HUD, "reach_display", ReachDisplayHudFrame.class);
         this.setSuffix("Shows how far away your last attack was");

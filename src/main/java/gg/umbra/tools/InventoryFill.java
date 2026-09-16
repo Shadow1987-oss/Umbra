@@ -52,6 +52,11 @@ extends HackModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "inventoryfill";
+    }
+
     public InventoryFill() {
         super("InventoryFill", -12288, Category.INVENTORY, "Clicks items in inventory while holding shift");
         this.timingState = new AutoClickerTimingState(Umbra.INSTANCE.getAccountTier());

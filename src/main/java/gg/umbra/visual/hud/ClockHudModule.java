@@ -15,6 +15,11 @@ extends HudModule {
     private final ModeOption analogMode;
     public final ToggleSetting use24HourTime = ToggleSetting.create(this, "24 Hour Time", false);
 
+    @Override
+    public String getId() {
+        return "clock";
+    }
+
     public ClockHudModule() {
         super("Clock", HudModuleGroup.HUD, "clock_mod", ClockHudFrame.class);
         this.showDate = ToggleSetting.create(this, "Show date", true);

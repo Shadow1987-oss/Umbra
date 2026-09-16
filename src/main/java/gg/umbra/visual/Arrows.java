@@ -164,6 +164,11 @@ extends HackModule {
         return !Umbra.INSTANCE.getFriendManager().isFriend(player.getName());
     }
 
+    @Override
+    public String getId() {
+        return "arrows";
+    }
+
     public Arrows() {
         super("Arrows", (int)MODULE_COLOR, Category.RENDER, "Draws arrows on screen when entities\nare out of your field of view.");
         this.showDistance = ToggleSetting.create(this, "Show Distance", false, "Renders the distance next to the arrow.");

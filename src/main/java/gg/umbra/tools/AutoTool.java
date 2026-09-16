@@ -129,6 +129,11 @@ extends HackModule {
         return bestSlot;
     }
 
+    @Override
+    public String getId() {
+        return "autotool";
+    }
+
     public AutoTool() {
         super("AutoTool", (int)MAGIC_ID, Category.WORLD, "Automatically swaps your hand to the appropriate tool");
         this.instantSwap = ToggleSetting.create(this, "Instant swap", true, "Swaps to weapon without swap delay");

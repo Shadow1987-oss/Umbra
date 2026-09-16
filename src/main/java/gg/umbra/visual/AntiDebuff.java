@@ -33,6 +33,11 @@ extends HackModule {
         this.duringRenderTick = true;
     }
 
+    @Override
+    public String getId() {
+        return "antidebuff";
+    }
+
     public AntiDebuff() {
         super("AntiDebuff", -256, Category.RENDER, "Removes negative visual potion effects");
         this.removeEffects = ToggleSetting.create(this, "Remove Effects", false, "Removes non-visual effects\nCan be detected by anti-cheat");

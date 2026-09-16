@@ -108,6 +108,11 @@ extends HackModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "blockin";
+    }
+
     public Clutch() {
         super("Block-In", 8191953, Category.WORLD, "Automatically blocks you in by building walls around you");
         this.faceOffsets = new int[][]{null, null, {5, 4}, {5, 4}, {2, 3}, {2, 3}};

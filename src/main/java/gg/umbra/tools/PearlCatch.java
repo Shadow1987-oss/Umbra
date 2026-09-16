@@ -68,6 +68,11 @@ public class PearlCatch extends UtilityHack {
     private int stateTicks;
     private int ticksSincePearl;
 
+    @Override
+    public String getId() {
+        return "pearlcatch";
+    }
+
     public PearlCatch() {
         super("PearlCatch", "Throws a pearl, then throws a wind charge to catch it");
         this.addValue(this.aimMode, this.aimSpeed, this.silentAim, this.chargeDelay);

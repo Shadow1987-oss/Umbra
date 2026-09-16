@@ -125,6 +125,11 @@ extends HackModule {
     }
 
 
+    @Override
+    public String getId() {
+        return "mlg";
+    }
+
     public MLG() {
         super("MLG", (int)MAGIC_ID, Category.WORLD, "Automatically places water under you when you fall");
         this.onLethalFall = ToggleSetting.create(this, "On lethal fall", true, "Activate MLG when the fall would deal enough damage to kill you");

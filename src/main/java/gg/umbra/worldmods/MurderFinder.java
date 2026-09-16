@@ -196,6 +196,11 @@ extends HackModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "murdererfinder";
+    }
+
     public MurderFinder() {
         super("MurdererFinder", -11859, Category.WORLD, "Shows a list of suspected Murderers.");
         this.callout = ToggleSetting.create(this, "Callout", false, "Calls out who the suspected murderer is in chat.");

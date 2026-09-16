@@ -35,6 +35,11 @@ extends HudModule {
         keystrokesHudFrame.handleKeyEvent(eventKeyPress);
     }
 
+    @Override
+    public String getId() {
+        return "keystrokes";
+    }
+
     public KeystrokesHudModule() {
         super("Keystrokes", HudModuleGroup.HUD, "keystrokes", KeystrokesHudFrame.class);
         this.keyStyle = OptionSetting.create((Object)this, "Key Style", this.keyboardKeyStyle, this.keyboardKeyStyle, this.arrowKeyStyle);

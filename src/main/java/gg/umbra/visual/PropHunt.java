@@ -25,6 +25,11 @@ public class PropHunt
 extends HackModule {
     private final ConcurrentHashMap<Object, Integer> trackedBlockAges = new ConcurrentHashMap();
 
+    @Override
+    public String getId() {
+        return "prophunt";
+    }
+
     public PropHunt() {
         super("PropHunt", 0, 15962879, Category.WORLD, "Renders where all the hidden props are.");
     }

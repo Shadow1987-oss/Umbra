@@ -346,6 +346,11 @@ implements InventoryActionModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "autototem";
+    }
+
     public AutoTotem() {
         super("AutoTotem", -43691, Category.INVENTORY, "Automatically equips totems to your offhand");
         this.actionTimer = new TimerUtil();

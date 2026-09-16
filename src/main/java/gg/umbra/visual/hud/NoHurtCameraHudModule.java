@@ -22,6 +22,11 @@ extends HudModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "nohurtcam";
+    }
+
     public NoHurtCameraHudModule() {
         super("NoHurtCam", HudModuleGroup.GAME, "legitmodeicon");
         this.setSuffix("Disables the hurt camera shaking effect");

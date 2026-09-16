@@ -27,6 +27,11 @@ extends HudModule {
     private boolean renderBlockhit;
 
 
+    @Override
+    public String getId() {
+        return "blockhitanimation";
+    }
+
     public BlockhitAnimationHudModule() {
         super("Blockhit Animation", HudModuleGroup.GAME, "animations");
         this.setSuffix("Shows 1.7 style blockhit animation constantly when blockhitting");

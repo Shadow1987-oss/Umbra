@@ -86,6 +86,11 @@ extends HackModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "trajectories";
+    }
+
     public Trajectories() {
         super("Trajectories", -16535661, Category.RENDER, "Shows a path of where your projectile will land\nTarget Color will only be used on the cross if there is an entity intersecting it");
         this.arrowProjectile = new WideArrowProjectile();

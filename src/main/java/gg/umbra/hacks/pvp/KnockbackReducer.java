@@ -72,6 +72,11 @@ extends HackModule {
         return this.horizontal.getDisplayValue() + "h " + this.vertical.getDisplayValue() + "v";
     }
 
+    @Override
+    public String getId() {
+        return "velocity";
+    }
+
     public KnockbackReducer() {
         super("Velocity", (int)COLOR_ID, Category.UTILITY, "Reduces knockback taken");
         this.waterCheck = ToggleSetting.create(this, "Water check", false, "Won't reduce knockback if in water");

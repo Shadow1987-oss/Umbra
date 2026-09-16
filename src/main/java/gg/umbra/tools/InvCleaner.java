@@ -67,6 +67,11 @@ implements InventoryActionModule {
         return this.isEnabled() && this.active && (this.openInventory.getEffectiveValue() != false || Minecraft.currentScreen().isNull());
     }
 
+    @Override
+    public String getId() {
+        return "invcleaner";
+    }
+
     public InvCleaner() {
         super("InvCleaner", (int)MAGIC_ID, Category.INVENTORY, "Cleans blacklisted items from your inventory");
         this.clickTimer = new TimerUtil();

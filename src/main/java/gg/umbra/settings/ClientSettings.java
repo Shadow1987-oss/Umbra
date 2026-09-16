@@ -915,6 +915,11 @@ extends HackModule {
         return allFrames;
     }
 
+    @Override
+    public String getId() {
+        return "gui";
+    }
+
     public ClientSettings() {
         super("GUI", 161, 0, Category.NONE, "Shift click any module button to bind it to a key.\n(You can shift click this to bind the GUI)\nHold TAB to view modules binds.");
         this.guiBindIndicator = ToggleSetting.create((Object)((Object)this), (String)"GUI bind indicator", (boolean)true, (String)"Displays a message indicating your GUI keybind upon injecting.\nI.E. \"Press RSHIFT to open GUI\"");

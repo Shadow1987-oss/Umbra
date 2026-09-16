@@ -209,6 +209,11 @@ extends HackModule {
         return -1.0f;
     }
 
+    @Override
+    public String getId() {
+        return "crystalaura";
+    }
+
     public ObsidianCracker() {
         super("CrystalAura", -4263937, Category.COMBAT, "Automatically places crystals on obsidian and breaks them for you.");
         this.mode = OptionSetting.create((Object)this, "Mode", "Auto - Automatically finds targets and places/breaks crystals\nManual - Hold right-click on obsidian with crystal to place and break crystals", (ModeSelection)this.autoSubModule.getSelectionValue(), this.autoSubModule.getSelectionValue(), this.manualSubModule.getSelectionValue());

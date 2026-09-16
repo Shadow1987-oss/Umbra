@@ -206,6 +206,11 @@ extends HudModule {
         RenderUtil.Y();
     }
 
+    @Override
+    public String getId() {
+        return "blockoverlay";
+    }
+
     public BlockOverlayHudModule() {
         super("Block Overlay", HudModuleGroup.GAME, "block_overlay");
         this.setSuffix("Highlights the block you're hovering by the specified color");

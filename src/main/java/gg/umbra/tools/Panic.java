@@ -13,6 +13,11 @@ extends UtilityHack {
     private final ToggleSetting reEnable = ToggleSetting.create(this, "Re-enable", false, "Re-enables all previously enabled modules upon pressing bind a second time");
     private final List<HackModule> disabledMods = new ArrayList<HackModule>();
 
+    @Override
+    public String getId() {
+        return "panic";
+    }
+
     public Panic() {
         super("Panic", "Disables all currently enabled modules");
         this.setDefaultVisibility(false);

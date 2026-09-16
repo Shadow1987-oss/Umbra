@@ -53,6 +53,11 @@ extends HackModule {
     public final ToggleSetting showNormalHitbox;
     public final ToggleSetting showBoundingBox;
 
+    @Override
+    public String getId() {
+        return "esp";
+    }
+
     public ESP() {
         super("ESP", -16711936, Category.RENDER, "Extra Sensory Perception\nRenders an ESP on players.");
         ESP2D esp2D = new ESP2D(this, "2D");

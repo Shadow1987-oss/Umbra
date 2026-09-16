@@ -114,6 +114,11 @@ implements InventoryActionModule {
         return this.activationMode.getValue() == this.onKeyMode;
     }
 
+    @Override
+    public String getId() {
+        return "autohotbar";
+    }
+
     public AutoHotbar() {
         super("AutoHotbar", -6656, Category.INVENTORY, "Automatically arranges hotbar to your liking.\nDoes not work in creative.");
         this.clickTimer = new TimerUtil();

@@ -116,6 +116,11 @@ extends HackModule {
         }
     }
 
+    @Override
+    public String getId() {
+        return "itemesp";
+    }
+
     public LootHighlight() {
         super("ItemESP", 48779, Category.RENDER, "Renders tags on dropped items.");
         this.groupItems = ToggleSetting.create(this, "Group Items", false, "Groups items into easier to read tags.");

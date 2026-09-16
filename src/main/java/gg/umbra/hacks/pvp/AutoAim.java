@@ -166,6 +166,11 @@ extends HackModule {
         return this.allowedItems.isValid(itemStack, false);
     }
 
+    @Override
+    public String getId() {
+        return "aimassist";
+    }
+
     public AutoAim() {
         super("AimAssist", -327674, Category.COMBAT, "Smoothly aims to closest valid target");
         this.adaptiveTargeting = new AimAssistTargetingSubModule(this, "Adaptive");

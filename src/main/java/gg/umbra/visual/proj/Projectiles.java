@@ -168,6 +168,11 @@ extends HackModule {
         OpenGlBackendHolder.backend.enableCapability(2929);
     }
 
+    @Override
+    public String getId() {
+        return "projectiles";
+    }
+
     public Projectiles() {
         super("Projectiles", -16535661, Category.RENDER, "Shows projectile trajectories while in air");
         this.eggProjectile = new Projectile(Collections.singleton(MappedClasses.l2), new Color(255, 238, 154));

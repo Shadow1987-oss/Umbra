@@ -61,6 +61,11 @@ extends UtilityHack {
         }
     }
 
+    @Override
+    public String getId() {
+        return "windcharge";
+    }
+
     public WindCharge() {
         super("WindCharge", "Automatically uses a wind charge");
         this.rotationClaim = SharedModuleControlClaims.rotation;

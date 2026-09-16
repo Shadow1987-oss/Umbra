@@ -50,6 +50,11 @@ extends HudModule {
         EventScoreboardScores.setLocked(false);
     }
 
+    @Override
+    public String getId() {
+        return "scoreboard";
+    }
+
     public ScoreboardHudModule() {
         super("Scoreboard", HudModuleGroup.HUD, "scoreboard", ScoreboardHudFrame.class);
         this.addValue(this.showScoreNumbers, this.textReplacements);

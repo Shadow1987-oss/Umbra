@@ -15,6 +15,11 @@ extends HackModule {
     private final NumberFormat healthFormat = new NumberFormat("#.#");
 
 
+    @Override
+    public String getId() {
+        return "health";
+    }
+
     public Health() {
         super("Health", -21075, Category.RENDER, "Displays your health in the center of your screen.");
     }
