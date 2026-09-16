@@ -1,0 +1,57 @@
+package gg.umbra.manager;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import gg.umbra.Umbra;
+import gg.umbra.visual.BlockFinder;
+import gg.umbra.ui.unmap.SearchBlock;
+import java.util.HashSet;
+import java.util.Set;
+
+public class SearchManager {
+    private final Set<SearchBlock> searchBlocks = new HashSet<SearchBlock>();
+
+    public JsonArray toJson() {
+        JsonArray result = new JsonArray();
+        for (SearchBlock searchBlock : this.searchBlocks) {
+            result.add((JsonElement)searchBlock.com_google_gson_JsonObject_I());
+        }
+        return result;
+    }
+
+    public void removeSearchBlock(SearchBlock searchBlock) {
+        if (searchBlock != null) {
+            BlockFinder search = Umbra.INSTANCE.getHackManager().getMod(BlockFinder.class);
+            this.searchBlocks.remove(searchBlock);
+            search.removeSearchBlock(searchBlock);
+        }
+    }
+
+    public void clearSearchBlocks() {
+        for (SearchBlock searchBlock : new HashSet<SearchBlock>(this.searchBlocks)) {
+            this.removeSearchBlock(searchBlock);
+        }
+    }
+
+
+    public Set<SearchBlock> getSearchBlocks() {
+        return this.searchBlocks;
+    }
+
+    public void addSearchBlock(SearchBlock searchBlock) {
+        this.searchBlocks.add(searchBlock);
+        BlockFinder search = Umbra.INSTANCE.getHackManager().getMod(BlockFinder.class);
+        search.addSearchBlock(searchBlock);
+    }
+
+    public void loadJson(JsonArray serializedSearchBlocks) {
+        this.clearSearchBlocks();
+        for (int index = 0; index < serializedSearchBlocks.size(); ++index) {
+            JsonElement element = serializedSearchBlocks.get(index);
+            if (!element.isJsonObject() || element.isJsonNull()) continue;
+            SearchBlock searchBlock = new SearchBlock(element.getAsJsonObject());
+            this.addSearchBlock(searchBlock);
+        }
+    }
+}
+

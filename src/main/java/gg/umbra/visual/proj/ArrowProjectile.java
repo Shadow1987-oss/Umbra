@@ -1,0 +1,25 @@
+package gg.umbra.visual.proj;
+
+import gg.umbra.mapping.MappedClasses;
+import gg.umbra.visual.proj.Projectile;
+import java.awt.Color;
+import java.util.Collections;
+import java.util.HashSet;
+
+public class ArrowProjectile
+extends Projectile {
+    public ArrowProjectile() {
+        super(new HashSet<Class>(Collections.singletonList(MappedClasses.F)), new Color(255, 0, 0));
+    }
+
+    @Override
+    public float getCollisionHeight() {
+        return 0.5f;
+    }
+
+    @Override
+    public float getCollisionRadius() {
+        return 0.25f;
+    }
+}
+
