@@ -18,7 +18,7 @@ extends HackModule {
     private BridgeBuilder scaffold;
 
     public Sprint() {
-        super("Sprint", 0, Category.COMBAT, "Sets your sprinting to true.");
+        super("Sprint", -16711796, Category.COMBAT, "Sets your sprinting to true.");
         this.addValue(this.cancelInvis);
     }
 

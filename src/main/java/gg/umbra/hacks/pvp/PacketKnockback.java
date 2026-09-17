@@ -41,7 +41,7 @@ extends HackModule {
     private SecondaryActionControlClaim controlClaim;
 
     public PacketKnockback() {
-        super("PacketKnockback", 0, Category.UTILITY, "Delays incoming knockback packets");
+        super("PacketKnockback", -14651232, Category.UTILITY, "Delays incoming knockback packets");
         this.heldPackets = new LinkedList<EventPacketReceive>();
         this.chance = SliderSetting.createWithDescription(this, "Chance", "#", "%", 0.0, 40.0, 100.0, "Chance of delaying knockback");
         this.airDelay = RandomRangeSetting.create(this, "Air delay", "#", "", 0.0, 50.0, 100.0, 500.0);

@@ -34,7 +34,7 @@ public class ShieldCracker extends HackModule {
     private boolean attackReleasePending;
 
     public ShieldCracker() {
-        super("ShieldBreaker", 0, Category.COMBAT,
+        super("ShieldBreaker", -16732034, Category.COMBAT,
                 "Swaps to an axe when attacking a player with a raised shield");
         this.swapDelay = SliderSetting.create(
                 this, "Swap delay", "#", "tick", 0.0, 5.0, 20.0, 1.0);

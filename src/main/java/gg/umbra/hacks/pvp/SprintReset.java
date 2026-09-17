@@ -26,7 +26,7 @@ extends HackModule {
     private boolean rePressPending;
 
     public SprintReset() {
-        super("WTap", 0, Category.COMBAT);
+        super("WTap", -668094, Category.COMBAT);
         this.releaseTimer = new TimerUtil();
         this.rePressTimer = new TimerUtil();
         this.addValue(this.chance, this.releaseDelay, this.rePressDelay, this.selectHits);

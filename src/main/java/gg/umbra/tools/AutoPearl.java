@@ -473,7 +473,7 @@ extends HackModule {
     }
 
     public AutoPearl() {
-        super("AutoPearl", 0, Category.UTILITY, "Aims and throws a pearl at an enemies pearl trajectory.");
+        super("AutoPearl", -16711936, Category.UTILITY, "Aims and throws a pearl at an enemies pearl trajectory.");
         this.trackedPearls = new HashMap<Integer, AutoPearlTrackedPearl>();
         this.handledPearlIds = new HashSet<Integer>();
         this.throwDelayTimer = new TimerUtil();

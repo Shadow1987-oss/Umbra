@@ -47,7 +47,7 @@ extends HackModule {
     public int fakeEntityId;
 
     public GhostCamera() {
-        super("Freecam", 0, Category.WORLD, "Lets you fly and clip through walls freely\nwithout moving your player server-sided.");
+        super("Freecam", 3248986, Category.WORLD, "Lets you fly and clip through walls freely\nwithout moving your player server-sided.");
         this.allowInteracting = ToggleSetting.create(this, "Allow Interacting", true, "Allows you to interact with blocks and entities while in freecam.");
         this.horizontalSpeed = SliderSetting.create(this, "Speed", "#.#", "", 1.0, 3.0, 5.0, 0.1, "Horizontal speed multiplier");
         this.moveFakePlayer = ToggleSetting.create(this, "Move Fake", false, "Move your fake entity with your arrow keys.");

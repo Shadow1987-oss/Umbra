@@ -61,7 +61,7 @@ extends HackModule {
     public final ToggleSetting limitToItems;
 
     public AutoHit() {
-        super("Triggerbot", 0, Category.COMBAT, "");
+        super("Triggerbot", -62703, Category.COMBAT, "");
         this.selectFirstHit = ToggleSetting.create(this, "Select first hit", false, "Waits for the opponent to hit you first before attacking");
         this.requireMouseDown = ToggleSetting.create(this, "Require mouse down", false);
         this.ignoreActivationClick = ToggleSetting.create(this, "Ignore activation click", false, "Ignores first manual click\n(unless already hovering a valid target with attack ready)");

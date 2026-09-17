@@ -20,7 +20,7 @@ extends HackModule {
     private boolean disconnected;
 
     public AutoLog() {
-        super("AutoLog", 0, Category.UTILITY, "Logs out before your health runs out.");
+        super("AutoLog", 1411533687, Category.UTILITY, "Logs out before your health runs out.");
         this.addValue(this.health, this.respectTotem);
     }
 

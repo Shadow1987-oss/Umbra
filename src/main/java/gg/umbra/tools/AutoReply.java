@@ -27,7 +27,7 @@ extends HackModule {
     private String pendingSender = null;
 
     public AutoReply() {
-        super("AutoReply", 0, Category.UTILITY, "Answers whispers for you so you never look AFK.");
+        super("AutoReply", -1175968219, Category.UTILITY, "Answers whispers for you so you never look AFK.");
         this.triggers = OptionalItemFilter.createWithDescription(this, "autoreply-triggers", "Triggers", "Phrases that mark a message as a private message", OptionalItemFilter.NEUTRAL_LIST_COLOR, Arrays.asList("whispers", "whispered", "From ", "says:"));
         this.replies = OptionalItemFilter.createWithDescription(this, "autoreply-replies", "Replies", "Random reply to send", OptionalItemFilter.NEUTRAL_LIST_COLOR, Arrays.asList("afk brb", "one sec", "im here", "busy rn"));
         this.delay = SliderSetting.createWithDescription(this, "Reply delay", "#", "ms", 100.0, 800.0, 5000.0, "Delay before sending the reply.");

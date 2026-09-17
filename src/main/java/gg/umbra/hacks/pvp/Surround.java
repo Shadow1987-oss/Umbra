@@ -43,7 +43,7 @@ extends HackModule {
     private boolean waiting;
 
     public Surround() {
-        super("Surround", 0, Category.COMBAT, "Places obsidian in the 4 blocks around you");
+        super("Surround", 651101232, Category.COMBAT, "Places obsidian in the 4 blocks around you");
         this.aimSpeed = SliderSetting.create(this, "Aim speed", "#.#", "", 1.0, 12.0, 20.0, 0.1);
         this.actionDelay = SliderSetting.create(this, "Action delay", "#", "ms", 0.0, 80.0, 500.0, 5.0);
         this.silentAim = ToggleSetting.create(this, "Silent aim", true, "Uses the Silent Aim system");

@@ -9,7 +9,7 @@ import gg.umbra.wrapper.impl.Minecraft;
 public class AutoWalk
 extends HackModule {
     public AutoWalk() {
-        super("AutoWalk", 0, Category.UTILITY, "Automatically holds the forward key");
+        super("AutoWalk", -1963991869, Category.UTILITY, "Automatically holds the forward key");
     }
 
     @Override

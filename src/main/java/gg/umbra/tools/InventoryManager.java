@@ -221,7 +221,7 @@ implements InventoryActionModule {
     }
 
     public InventoryManager() {
-        super("InventoryManager", 0, Category.INVENTORY, "Manage your inventory");
+        super("InventoryManager", -13181746, Category.INVENTORY, "Manage your inventory");
         this.activationMode = OptionSetting.create((Object)this, "Activation", this.onKeyMode, this.onKeyMode, this.toggleMode);
         this.openInventoryValue = ToggleSetting.create(this, "Open inventory", true, "If on, inventory will automatically be opened when inventory needs to be managed\nIf off, inventory will only be managed after inventory is manually opened");
         this.combatCheckValue = ToggleSetting.create(this, "Combat check", false);

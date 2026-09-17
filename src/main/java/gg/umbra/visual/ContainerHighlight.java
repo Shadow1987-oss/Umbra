@@ -42,7 +42,7 @@ extends HackModule {
     private final ToggleSetting outlineOpen = ToggleSetting.create(this, "Outline open", true, "Outlines open chests by contrasting color");
 
     public ContainerHighlight() {
-        super("StorageESP", 0, Category.RENDER);
+        super("StorageESP", 3465010, Category.RENDER);
         this.renderChests = ToggleSetting.create(this, "Render Chests", true);
         this.renderTrappedChests = ToggleSetting.create(this, "Render Trapped Chests", true);
         this.renderEnderchests = ToggleSetting.create(this, "Render Enderchests", false);

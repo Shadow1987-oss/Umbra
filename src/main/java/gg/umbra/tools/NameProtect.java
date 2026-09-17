@@ -21,7 +21,7 @@ extends HackModule {
     private final ToggleSetting protectOwnName;
 
     public NameProtect() {
-        super("NameProtect", 0, Category.UTILITY, "Shows an alias instead of your username in chat.");
+        super("NameProtect", 517044283, Category.UTILITY, "Shows an alias instead of your username in chat.");
         this.alias = StringValue.create(this, "Alias", "Player");
         this.protectOwnName = ToggleSetting.create(this, "Protect name", true, "Replace your username in chat messages.");
         this.addValue(this.alias, this.protectOwnName);

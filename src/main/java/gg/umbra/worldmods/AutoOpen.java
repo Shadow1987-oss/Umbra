@@ -33,7 +33,7 @@ extends HackModule {
     private long lastOpenedWorldTime;
 
     public AutoOpen() {
-        super("AutoOpen", 0, Category.WORLD, "Opens nearby chests for you (pair with Loot Stealer to loot them).");
+        super("AutoOpen", 90214677, Category.WORLD, "Opens nearby chests for you (pair with Loot Stealer to loot them).");
         this.range = SliderSetting.create(this, "Range", "#", "", 1.0, 4.0, 8.0, 1.0);
         this.delay = SliderSetting.create(this, "Delay", "#", "ms", 50.0, 400.0, 2000.0, 10.0);
         this.openEnderChests = ToggleSetting.create(this, "Open ender chests", false);

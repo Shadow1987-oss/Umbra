@@ -16,7 +16,7 @@ extends HackModule {
     public final ItemFilterList allowedItems = ItemFilterList.create(this, "noitemrelease-alloweditems", "Allowed items", ItemFilterList.ALLOW_LIST_COLOR, new ItemLimitData("swords"), new ItemLimitData("food"), new ItemLimitData("potions"));
 
     public BlockHit() {
-        super("NoItemRelease", 0, Category.OTHER);
+        super("NoItemRelease", -2420426, Category.OTHER);
         this.addValue(this.allowedItems);
     }
 

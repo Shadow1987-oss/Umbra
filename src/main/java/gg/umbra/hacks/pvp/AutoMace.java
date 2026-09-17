@@ -114,7 +114,7 @@ public class AutoMace extends HackModule {
     }
 
     public AutoMace() {
-        super("AutoMace", 0, Category.COMBAT);
+        super("AutoMace", -16732037, Category.COMBAT);
         this.maceSelection = OptionSetting.create(this, "Mace selection",
                 "Manual uses Mace type. Auto chooses the best mace enchantment for your fall distance and target armor.",
                 SELECTION_MANUAL, SELECTION_MANUAL, SELECTION_AUTO);

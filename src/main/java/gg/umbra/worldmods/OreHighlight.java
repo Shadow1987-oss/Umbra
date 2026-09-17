@@ -36,7 +36,7 @@ extends HackModule {
     private final ToggleSetting caveOptionSetting;
 
     public OreHighlight() {
-        super("Xray", 0, Category.WORLD, "Renders whitelisted blocks through walls.");
+        super("Xray", 65535, Category.WORLD, "Renders whitelisted blocks through walls.");
         this.opacityValue = SliderSetting.create((Object) this, "Opacity", "#", "", 0.0, 60.0, 255.0, 1.0);
         this.caveOptionSetting = ToggleSetting.create(this, "Cave Mode", false, "Only shows ores that are exposed to air.");
         this.blockIds = new ArrayList<Integer>();

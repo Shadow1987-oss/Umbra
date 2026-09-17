@@ -35,7 +35,7 @@ extends HackModule {
     private EntityLivingBase lockedTarget;
 
     public AutoCity() {
-        super("AutoCity", 0, Category.COMBAT, "Mines the block next to the nearest enemy to city them.");
+        super("AutoCity", 224416193, Category.COMBAT, "Mines the block next to the nearest enemy to city them.");
         this.range = SliderSetting.create(this, "Range", "#", "", 1.0, 4.0, 8.0, 1.0);
         this.delay = SliderSetting.create(this, "Delay", "#", "ms", 0.0, 150.0, 1000.0, 10.0);
         this.obsidianOnly = ToggleSetting.create(this, "Obsidian only", false, "Only breaks obsidian blocks (crystal pvp)");

@@ -52,7 +52,7 @@ extends HackModule {
     private final TimerUtil inactivityTimer = new TimerUtil();
 
     public AntiAFK() {
-        super("Anti-AFK", 0, Category.WORLD);
+        super("Anti-AFK", 9782004, Category.WORLD);
         this.movementTimer = new TimerUtil();
         this.rotationTimer = new TimerUtil();
         this.movementDurationTimer = new TimerUtil();

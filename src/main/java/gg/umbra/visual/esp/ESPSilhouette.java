@@ -176,6 +176,7 @@ extends SubHack<ESP> {
                 double renderZ = previousZ + (entity.h() - previousZ) * (double)partialTicks - cameraZ;
                 RenderLivingBase renderLivingBase = new RenderLivingBase(Minecraft.D().getEntityRenderObject(entity).getObject());
                 if (!renderLivingBase.isNotNull()) {
+                    this.queueFallbackBox(renderX, renderY, renderZ, entity.b(), color, fillAlpha, throughWalls);
                     continue;
                 }
                 ArrayList<float[]> quads = new ArrayList<float[]>();
@@ -190,9 +191,11 @@ extends SubHack<ESP> {
                         ESPSilhouette.modernFailureReported = true;
                         Umbra.debugLog("ESPSilhouette: model capture unavailable on this build; falling back to bounding shape.");
                     }
+                    this.queueFallbackBox(renderX, renderY, renderZ, entity.b(), color, fillAlpha, throughWalls);
                     continue;
                 }
                 if (quads.isEmpty()) {
+                    this.queueFallbackBox(renderX, renderY, renderZ, entity.b(), color, fillAlpha, throughWalls);
                     continue;
                 }
                 this.queueSilhouetteQuads(quads, renderX, renderY, renderZ, color, thickness, fillAlpha, throughWalls);
@@ -249,6 +252,12 @@ extends SubHack<ESP> {
 
     private static float scale(double value, double origin, float factor) {
         return (float)(origin + (value - origin) * (double)factor);
+    }
+
+    private void queueFallbackBox(double renderX, double renderY, double renderZ, double halfWidth, MutableColor color, float fillAlpha, boolean throughWalls) {
+        float[] colorComponents = RenderUtils.d(color.l());
+        this.setDepthState(!throughWalls, true);
+        BufferedRenderPrimitives.fillBox(renderX - halfWidth, renderY, renderZ - halfWidth, renderX + halfWidth, renderY + 1.8, renderZ + halfWidth, new Color(this.rgbaToInt(colorComponents[0], colorComponents[1], colorComponents[2], fillAlpha)));
     }
 
     private int rgbaToInt(float r, float g, float b, float a) {

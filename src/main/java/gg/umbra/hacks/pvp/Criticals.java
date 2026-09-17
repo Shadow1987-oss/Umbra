@@ -11,7 +11,7 @@ import gg.umbra.wrapper.impl.Minecraft;
 public class Criticals
 extends HackModule {
     public Criticals() {
-        super("Criticals", 0, Category.COMBAT, "Jumps before attacking so your hits land as critical hits.\nWorks with KillAura and with manual clicks (best paired with an autoclicker).");
+        super("Criticals", 1197892695, Category.COMBAT, "Jumps before attacking so your hits land as critical hits.\nWorks with KillAura and with manual clicks (best paired with an autoclicker).");
     }
 
     @Override

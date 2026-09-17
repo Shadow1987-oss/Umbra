@@ -15,7 +15,7 @@ import gg.umbra.wrapper.impl.WorldClient;
 public class AutoSneak
 extends HackModule {
     public AutoSneak() {
-        super("AutoSneak", 0, Category.UTILITY, "Holds sneak when you are about to walk off an edge.");
+        super("AutoSneak", -1484975919, Category.UTILITY, "Holds sneak when you are about to walk off an edge.");
     }
 
     @Override

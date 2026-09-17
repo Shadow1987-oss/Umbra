@@ -32,7 +32,7 @@ extends HackModule {
     private WorldClient lastWorld;
 
     public Breadcrumbs() {
-        super("Breadcrumbs", 0, Category.RENDER, "Draws a line where you have walked.");
+        super("Breadcrumbs", 1174203485, Category.RENDER, "Draws a line where you have walked.");
         this.maxPoints = SliderSetting.create(this, "Max points", "#", "", 10.0, 200.0, 1000.0, 10.0);
         this.lineWidth = SliderSetting.create(this, "Line width", "#.##", "", 0.5, 1.5, 5.0, 0.1);
         this.recordInterval = SliderSetting.create(this, "Record interval", "#", "ms", 10.0, 50.0, 500.0, 10.0);

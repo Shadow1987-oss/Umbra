@@ -261,7 +261,7 @@ extends HackModule {
     }
 
     public SilentCombat() {
-        super("SilentAura", 0, Category.COMBAT, "Simulates feel of Killaura\nAttacks and aims safely using built in AutoClicker to click, and Silent Aim system to aim");
+        super("SilentAura", -2420426, Category.COMBAT, "Simulates feel of Killaura\nAttacks and aims safely using built in AutoClicker to click, and Silent Aim system to aim");
         this.requireMouseDown = ToggleSetting.create(this, "Require mouse down", false);
         this.disableOnDeath = ToggleSetting.create(this, "Disable on death", false);
         this.showTarget = ToggleSetting.create(this, "Show target", false);

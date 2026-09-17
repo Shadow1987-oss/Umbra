@@ -14,7 +14,7 @@ extends HackModule {
     private final OptionalItemFilter filters;
 
     public ChatFilter() {
-        super("ChatFilter", 0, Category.UTILITY, "Hides chat lines that contain your blocked words.");
+        super("ChatFilter", 2117988976, Category.UTILITY, "Hides chat lines that contain your blocked words.");
         this.filters = OptionalItemFilter.createWithDescription(this, "chatfilter-keywords", "Blocked Words", "Messages containing any of these are hidden", OptionalItemFilter.NEUTRAL_LIST_COLOR, Arrays.asList("discord.gg", "advertise", "www."));
         this.addValue(this.filters);
     }

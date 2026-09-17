@@ -25,7 +25,7 @@ extends HackModule {
     private final TimerUtil eatTimer = new TimerUtil();
 
     public AutoFood() {
-        super("AutoFood", 0, Category.UTILITY, "Eats from your hotbar when hunger runs low.");
+        super("AutoFood", -175858118, Category.UTILITY, "Eats from your hotbar when hunger runs low.");
         this.foodLevel = SliderSetting.create(this, "Food level", "#", "", 1.0, 10.0, 19.0, 1.0);
         this.delay = SliderSetting.createWithDescription(this, "Delay", "#", "ms", 500.0, 2000.0, 10000.0, "Cooldown between eating attempts.");
         this.silent = ToggleSetting.create(this, "Silent", true, "Uses packet switching so the server sees the food without a visible slot swap.");

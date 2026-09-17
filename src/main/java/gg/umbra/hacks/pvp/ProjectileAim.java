@@ -75,7 +75,7 @@ extends HackModule {
     }
 
     public ProjectileAim() {
-        super("AntiFireball", 0, Category.UTILITY, "Aims and swings at a fireball to reflect it.\nBy default will only attack fireballs heading towards you.");
+        super("AntiFireball", 13454412, Category.UTILITY, "Aims and swings at a fireball to reflect it.\nBy default will only attack fireballs heading towards you.");
         this.stopMovement = ToggleSetting.create(this, "Stop movement", false, "Forces you to stand when attacking fireball");
         this.moveOnFinish = ToggleSetting.create(this, "Move on finish", false, "Will repress your movement keys after attacking");
         this.silentAim = ToggleSetting.create(this, "Silent aim", false, "Uses Silent Aim system");

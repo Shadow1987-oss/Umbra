@@ -39,7 +39,7 @@ extends HackModule {
     private boolean hasScanned = false;
 
     public HoleESP() {
-        super("HoleESP", 0, Category.RENDER, "Outlines safe 1x1 holes around you.");
+        super("HoleESP", -1042134892, Category.RENDER, "Outlines safe 1x1 holes around you.");
         this.range = SliderSetting.create(this, "Range", "#", "", 1.0, 8.0, 32.0, 1.0);
         this.requiredSides = SliderSetting.create(this, "Required sides", "#", "", 1.0, 4.0, 4.0, 1.0, "How many solid walls a hole needs to be highlighted (4 = fully enclosed)");
         this.safeOnly = ToggleSetting.create(this, "Safe only", false, "Only highlight holes that meet the required sides");

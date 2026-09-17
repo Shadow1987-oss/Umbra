@@ -19,7 +19,7 @@ extends HackModule {
     private final SubHackValue latencyMode = new FakeLagDelayedPacketMode(this, "Latency").getSelectionValue();
 
     public FakeLag() {
-        super("FakeLag", 0, Category.UTILITY, "Holds your packets back to look laggy.");
+        super("FakeLag", 8919359, Category.UTILITY, "Holds your packets back to look laggy.");
         this.dynamicMode = new FakeLagPacketDelaySubModule(this, "Dynamic").getSelectionValue();
         this.repelMode = new LegacyFakeLagCombatPacketQueueMode(this, "Repel").getSelectionValue();
         this.delay = SliderSetting.create((Object) this, "Delay", "#", "ms", 1.0, 100.0, 1000.0, 10.0);

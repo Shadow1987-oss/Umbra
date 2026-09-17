@@ -21,7 +21,7 @@ extends HackModule {
     private long lastSentAt = 0L;
 
     public AutoGG() {
-        super("AutoGG", 0, Category.UTILITY, "Says gg for you when the game ends.");
+        super("AutoGG", -371460927, Category.UTILITY, "Says gg for you when the game ends.");
         this.delay = SliderSetting.createWithDescription(this, "Delay", "#", "ms", 0.0, 700.0, 5000.0, "Delay before sending gg after the game ends.");
         this.triggers = OptionalItemFilter.createWithDescription(this, "autogg-triggers", "Game End Triggers", "Phrases that detect the end of a game", OptionalItemFilter.NEUTRAL_LIST_COLOR, Arrays.asList("you died", "you won", "1st killer", "1st place", "victory", "defeat", "a player has won the game", "the game has ended"));
         this.addValue(this.delay, this.triggers);

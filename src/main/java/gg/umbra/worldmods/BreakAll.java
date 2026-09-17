@@ -32,7 +32,7 @@ extends HackModule {
     private BlockPos targetBlock;
 
     public BreakAll() {
-        super("BreakAll", 0, Category.WORLD, "Mines every block around you.");
+        super("BreakAll", 833310152, Category.WORLD, "Mines every block around you.");
         this.range = SliderSetting.create(this, "Range", "#", "", 1.0, 4.0, 8.0, 1.0);
         this.delay = SliderSetting.create(this, "Delay", "#", "ms", 0.0, 100.0, 1000.0, 10.0);
         this.scanDelay = SliderSetting.createWithDescription(this, "Scan delay", "#", "ms", 25.0, 150.0, 1000.0, "How often the surrounding blocks are re-scanned once the current target is broken.");

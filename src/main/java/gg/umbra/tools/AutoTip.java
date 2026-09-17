@@ -14,7 +14,7 @@ extends HackModule {
     private final TimerUtil tipTimer = new TimerUtil();
 
     public AutoTip() {
-        super("AutoTip", 0, Category.UTILITY, "Tips everyone with /tip all on a timer.");
+        super("AutoTip", 583550429, Category.UTILITY, "Tips everyone with /tip all on a timer.");
         this.interval = SliderSetting.createWithDescription(this, "Interval", "#", "min", 1.0, 10.0, 60.0, "Minutes between tips.");
         this.addValue(this.interval);
     }

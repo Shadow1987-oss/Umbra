@@ -23,7 +23,7 @@ extends HackModule {
     private long lastPlayedAt = 0L;
 
     public AutoPlay() {
-        super("AutoPlay", 0, Category.UTILITY, "Queues the next game with /play as soon as one ends.");
+        super("AutoPlay", 807971175, Category.UTILITY, "Queues the next game with /play as soon as one ends.");
         this.mode = StringValue.create(this, "Mode", "bedwars_eight_one");
         this.delay = SliderSetting.createWithDescription(this, "Delay", "#", "ms", 0.0, 700.0, 5000.0, "Delay before sending /play after the game ends.");
         this.triggers = OptionalItemFilter.createWithDescription(this, "autoplay-triggers", "Game End Triggers", "Phrases that detect the end of a game", OptionalItemFilter.NEUTRAL_LIST_COLOR, Arrays.asList("you died", "you won", "1st killer", "1st place", "victory", "defeat", "a player has won the game", "the game has ended"));

@@ -22,7 +22,7 @@ extends HackModule {
     private boolean jumpKeyWasPressed;
 
     public Parkour() {
-        super("Parkour", 0, Category.WORLD, "Jumps for you at the edge of blocks.");
+        super("Parkour", -7719233, Category.WORLD, "Jumps for you at the edge of blocks.");
     }
 
     @Override

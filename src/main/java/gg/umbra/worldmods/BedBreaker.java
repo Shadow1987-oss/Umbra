@@ -43,7 +43,7 @@ extends HackModule {
     private final HashMap<BedTargetRenderPosition, BedTargetRenderState> renderStates = new HashMap();
 
     public BedBreaker() {
-        super("BedBreaker", 0, Category.WORLD, "Allows you to break beds through walls\n\u00a7cWarning: This behavior is normally impossible and may be detected on servers");
+        super("BedBreaker", 4627456, Category.WORLD, "Allows you to break beds through walls\n\u00a7cWarning: This behavior is normally impossible and may be detected on servers");
     }
 
     @Override

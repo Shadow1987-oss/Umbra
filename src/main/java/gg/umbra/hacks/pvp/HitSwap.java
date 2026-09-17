@@ -315,7 +315,7 @@ extends HackModule {
     }
 
     public HitSwap() {
-        super("HitSwap", 0, Category.UTILITY, "Swaps into another weapon on attack, copying its attributes\nAKA BreachSwap, ZeroTick");
+        super("HitSwap", -16732037, Category.UTILITY, "Swaps into another weapon on attack, copying its attributes\nAKA BreachSwap, ZeroTick");
         this.smashOnly = ToggleSetting.create(this, "Smash only", true, "Only swap to mace if will smash");
         this.breachMaces = ToggleSetting.create(this, "Breach maces", false, "Will use Maces with Breach enchantment");
         this.densityMaces = ToggleSetting.create(this, "Density maces", true, "Will use Maces with Breach enchantment");

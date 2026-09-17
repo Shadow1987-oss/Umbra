@@ -38,7 +38,7 @@ extends HackModule {
     private final Random random = new Random();
 
     public FallReset() {
-        super("JumpReset", 0, Category.COMBAT, "Reduces knockback taken by jumping when hit");
+        super("JumpReset", -13463640, Category.COMBAT, "Reduces knockback taken by jumping when hit");
         this.onlyWhenTargeting = ToggleSetting.create(this, "Only when targeting", false, "Only reduce knockback while being face to face with opponent");
         this.accuracy = RandomRangeSetting.createWithDescription(this, "Accuracy", "#", "%", 0.0, 40.0, 60.0, 100.0, 1.0, "If you will jump, this is the chance that you will actually land a perfect jump reset on time");
         this.chance = SliderSetting.createWithDescription(this, "Chance", "#", "%", 0.0, 40.0, 100.0, "Chance of reducing knockback");

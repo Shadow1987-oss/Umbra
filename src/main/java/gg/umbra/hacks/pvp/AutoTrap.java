@@ -48,7 +48,7 @@ extends HackModule {
     private EntityLivingBase trappedTarget;
 
     public AutoTrap() {
-        super("AutoTrap", 0, Category.COMBAT, "Boxes the nearest enemy in obsidian to trap them.");
+        super("AutoTrap", 4122056, Category.COMBAT, "Boxes the nearest enemy in obsidian to trap them.");
         this.range = SliderSetting.create(this, "Range", "#", "", 1.0, 4.0, 8.0, 1.0);
         this.aimSpeed = SliderSetting.create(this, "Aim speed", "#.#", "", 1.0, 12.0, 20.0, 0.1);
         this.actionDelay = SliderSetting.create(this, "Action delay", "#", "ms", 0.0, 80.0, 500.0, 5.0);

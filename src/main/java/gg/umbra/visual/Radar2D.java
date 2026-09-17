@@ -42,7 +42,7 @@ extends HackModule {
     private final ColorPicker background;
 
     public Radar2D() {
-        super("Radar 2D", 0, Category.RENDER, "Minimap with nearby players on it.");
+        super("Radar 2D", 713524689, Category.RENDER, "Minimap with nearby players on it.");
         this.position = OptionSetting.create(this, "Position", "Where the radar is drawn on screen", (ModeSelection) this.topRightMode, this.topRightMode, this.topLeftMode, this.topRightMode, this.bottomLeftMode, this.bottomRightMode);
         this.radius = SliderSetting.create(this, "Radius", "#", "", 20.0, 60.0, 150.0, 5.0);
         this.range = SliderSetting.create(this, "Range", "#", "blocks", 10.0, 40.0, 200.0, 5.0);

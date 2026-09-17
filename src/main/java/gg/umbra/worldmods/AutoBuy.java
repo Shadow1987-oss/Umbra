@@ -25,7 +25,7 @@ extends HackModule {
     private boolean buying = false;
 
     public AutoBuy() {
-        super("AutoBuy", 0, Category.WORLD, "Clicks your configured shop slots for you (BedWars/SkyWars). Slot numbers depend on the server's shop layout.");
+        super("AutoBuy", -483965818, Category.WORLD, "Clicks your configured shop slots for you (BedWars/SkyWars). Slot numbers depend on the server's shop layout.");
         this.delay = SliderSetting.createWithDescription(this, "Click delay", "#", "ms", 25.0, 200.0, 1000.0, "Delay between each purchase click.");
         this.closeAfter = ToggleSetting.create(this, "Close after", true, "Close the shop after buying everything.");
         this.buySlots = OptionalItemFilter.createWithDescription(this, "autobuy-slots", "Buy Slots", "Slot numbers to click in the shop", OptionalItemFilter.NEUTRAL_LIST_COLOR, Arrays.asList("0", "1", "2"));
