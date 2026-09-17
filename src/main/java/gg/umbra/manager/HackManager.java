@@ -94,6 +94,7 @@ import gg.umbra.visual.hud.NoFogHudModule;
 import gg.umbra.visual.hud.NoHurtCameraHudModule;
 import gg.umbra.visual.hud.NoHurtDelayHudModule;
 import gg.umbra.visual.hud.PotionEffectsHudModule;
+import gg.umbra.visual.hud.PingHudModule;
 import gg.umbra.visual.hud.ReachDisplayHudModule;
 import gg.umbra.visual.hud.ScoreboardHudModule;
 import gg.umbra.visual.hud.TimeChangerHudModule;
@@ -483,7 +484,7 @@ implements EventListener {
         ModRegistrationBuilder.create().setModule(new MouseDelayFix()).addVersionConstraint(ForgeVersion.MC_1_8_9.S()).registerWith(this);
         this.registerModules(Stream.of(new KeystrokesHudModule(), new ClockHudModule(), new PotionEffectsHudModule()));
         ModRegistrationBuilder.create().setModule(new BlockhitAnimationHudModule()).addVersionConstraint(ForgeVersion.MC_1_8_9.S()).registerWith(this);
-        this.registerModules(Stream.of(new NoHurtDelayHudModule(), new ArmorStatusHudModule(), new CompassHudModule(), new WeatherChangerHudModule(), new NoHurtCameraHudModule(), new TimeChangerHudModule(), new CoordinatesHudModule(), new FpsDisplayHudModule(), new ReachDisplayHudModule(), new NoFogHudModule(), new BlockOverlayHudModule()));
+        this.registerModules(Stream.of(new NoHurtDelayHudModule(), new ArmorStatusHudModule(), new CompassHudModule(), new WeatherChangerHudModule(), new NoHurtCameraHudModule(), new TimeChangerHudModule(), new CoordinatesHudModule(), new FpsDisplayHudModule(), new PingHudModule(), new ReachDisplayHudModule(), new NoFogHudModule(), new BlockOverlayHudModule()));
         ModRegistrationBuilder.create().setModule(new BlockRenderColorOverrideHudModule()).addVersionConstraints(ForgeVersion.MC_1_7_10.N(), ForgeVersion.MC_1_16_5.b()).registerWith(this);
         this.registerModules(Stream.of(new ScoreboardHudModule(), new InventoryBlurHudModule()), HackManager::addMinecraft1206Constraint);
     }
