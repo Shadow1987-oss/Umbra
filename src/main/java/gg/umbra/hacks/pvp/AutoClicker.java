@@ -61,7 +61,7 @@ extends HackModule {
     }
 
     public AutoClicker(String moduleName) {
-        super(moduleName, 0, Category.COMBAT, "");
+        super(moduleName, -62703, Category.COMBAT, "");
     }
 
     public void setClickEngine(ClickEngine clickEngine) {
