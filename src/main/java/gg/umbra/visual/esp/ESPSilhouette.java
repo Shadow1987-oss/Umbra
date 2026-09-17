@@ -27,6 +27,8 @@ import gg.umbra.wrapper.impl.RenderManager;
 import gg.umbra.wrapper.impl.WorldClient;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import org.lwjgl.opengl.GL11;
 
 /**
@@ -44,6 +46,20 @@ extends SubHack<ESP> {
     private final ESP parentEsp = (ESP)this.getParent();
     private boolean renderingSilhouette;
     private static boolean modernFailureReported;
+    private static final Set<String> loggedSkipReasons = new HashSet<String>();
+
+    private static void logSkipOnce(Entity entity, String reason) {
+        String name;
+        try {
+            name = entity.getName();
+        } catch (Throwable throwable) {
+            name = "?";
+        }
+        String key = name + "|" + reason;
+        if (loggedSkipReasons.add(key)) {
+            Umbra.debugLog("ESPSilhouette: skip " + name + " (" + reason + ")");
+        }
+    }
 
     @Listen
     public void onPreRenderLiving(EventPreRenderLiving event) {
@@ -176,6 +192,7 @@ extends SubHack<ESP> {
                 double renderZ = previousZ + (entity.h() - previousZ) * (double)partialTicks - cameraZ;
                 RenderLivingBase renderLivingBase = new RenderLivingBase(Minecraft.D().getEntityRenderObject(entity).getObject());
                 if (!renderLivingBase.isNotNull()) {
+                    ESPSilhouette.logSkipOnce(entity, "no-renderer");
                     this.queueFallbackBox(renderX, renderY, renderZ, entity.b(), color, fillAlpha, throughWalls);
                     continue;
                 }
@@ -191,13 +208,16 @@ extends SubHack<ESP> {
                         ESPSilhouette.modernFailureReported = true;
                         Umbra.debugLog("ESPSilhouette: model capture unavailable on this build; falling back to bounding shape.");
                     }
+                    ESPSilhouette.logSkipOnce(entity, "capture-fail");
                     this.queueFallbackBox(renderX, renderY, renderZ, entity.b(), color, fillAlpha, throughWalls);
                     continue;
                 }
                 if (quads.isEmpty()) {
+                    ESPSilhouette.logSkipOnce(entity, "empty-quads");
                     this.queueFallbackBox(renderX, renderY, renderZ, entity.b(), color, fillAlpha, throughWalls);
                     continue;
                 }
+                ESPSilhouette.logSkipOnce(entity, "ok-quads-" + quads.size());
                 this.queueSilhouetteQuads(quads, renderX, renderY, renderZ, color, thickness, fillAlpha, throughWalls);
             }
         }
@@ -347,11 +367,12 @@ extends SubHack<ESP> {
         float fillAlpha = ((Double)this.parentEsp.silhouetteFillAlpha.getValue()).floatValue();
         boolean throughWalls = this.parentEsp.silhouetteThroughWalls.getEffectiveValue().booleanValue();
         for (Object entityHandle : world.z()) {
-            Entity entity = new Entity(entityHandle);
-            MutableColor color = this.parentEsp.resolveEntityColor(viewer, entity);
-            if (color == null) {
-                continue;
-            }
+                Entity entity = new Entity(entityHandle);
+                MutableColor color = this.parentEsp.resolveEntityColor(viewer, entity);
+                if (color == null) {
+                    ESPSilhouette.logSkipOnce(entity, "no-color");
+                    continue;
+                }
             if (entity.equals(viewer) || !entity.isInstance(MappedClasses.Yl)) {
                 continue;
             }
